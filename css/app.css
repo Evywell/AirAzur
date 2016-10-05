@@ -44,11 +44,18 @@ input[type="submit"]
 }
 
 #bandeau {
-    padding-left:300px;
+    display:block;
+    text-align:center;
 }
 
 #menu{
 height: 1.8em ;
+text-align: center;
+}
+
+#menu ul{
+    display: inline-block;
+    padding: 0;
 }
 
 #contenu{
@@ -58,7 +65,8 @@ height: 1.8em ;
 #menu li {
     list-style-type: none;
     list-style-image:none;
-    float: left ;
+    display: inline-block;
+    text-align: center;
     text-align: center;
     width: 200px ; 
     border: 1px solid #600 ; 
