@@ -59,7 +59,7 @@ switch($action){
         
     case 'voirReservations':
         $reservations = isset($_SESSION['reservations']) ? $_SESSION['reservations'] : [] ;
-        require "vues/voirReservations.php";
+        require "vues/v_voirReservations.php";
         break;
     
     default:
