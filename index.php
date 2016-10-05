@@ -1,6 +1,5 @@
 <?php
 session_start();
-var_dump($_SESSION);
 require "utils/fonctions.php";
 require "modele/Model.php";
 ob_start();
@@ -43,7 +42,7 @@ switch($action){
         }
         
         ajouterPanier($reservation);
-        setFlash("La réservation pour le vol n°{$_POST['idVol']} est confirmée pour le client {$_POST['nom']} {$_POST['prenom']}");
+        setFlash("La réservation pour le vol n°{$reservation['numero']} est confirmée pour le client {$reservation['nom']} {$reservation['prenom']}");
         header('location:index.php');
         die();
         break;
