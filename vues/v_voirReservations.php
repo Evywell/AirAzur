@@ -1,6 +1,6 @@
 <h2>Liste des réservations</h2>
 
-<table>
+<table style="width:100%">
     <thead>
         <tr>
             <td>Nom</td>
