@@ -78,7 +78,7 @@ height: 1.8em ;
     border-collapse:collapse;
 }
 
-#reservations td, th {
+#reservations td, #reservations th {
     border-width: 1px;
     border-style: solid;
     border-color: #666;
@@ -106,5 +106,4 @@ height: 1.8em ;
     background-color: #dff0d8;
     border-color: #d6e9c6;
 }
-
 

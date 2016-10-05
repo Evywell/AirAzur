@@ -1,13 +1,13 @@
 <h2>Liste des réservations</h2>
 
-<table style="width:100%">
+<table style="width:100%" class="hover">
     <thead>
         <tr>
-            <td>Nom</td>
-            <td>Prénom</td>
-            <td>Numéro de vol</td>
-            <td>Nb places</td>
-            <td>Actions</td>  
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Numéro de vol</th>
+            <th>Nb places</th>
+            <th>Actions</th>  
         </tr>
     </thead>
     <tbody>

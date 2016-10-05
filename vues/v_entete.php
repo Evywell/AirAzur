@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>AirAzur</title>
+        <link rel="stylesheet" href="css/foundation.min.css"/>
         <link rel="stylesheet" href="css/app.css"/>
     </head>
     <body>
