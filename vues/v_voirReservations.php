@@ -17,7 +17,7 @@
         <td><?php echo $reservation['prenom']; ?></td>
         <td><?php echo $reservation['numero']; ?></td>
         <td><?php echo $reservation['nbplaces']; ?></td>
-        <td><a href="#"><img src="images/pdf.png"></a> - <a href="index.php?action=suppReservation&id=<?php echo $k; ?>">Supprimer</a></td>
+        <td><a href="index.php?action=pdfReservation&numReservation=<?php echo $k; ?>"><img src="images/pdf.png"></a> - <a href="index.php?action=suppReservation&id=<?php echo $k; ?>">Supprimer</a></td>
     </tr>
 <?php endforeach; ?>
     </tbody>

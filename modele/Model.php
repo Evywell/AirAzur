@@ -39,7 +39,7 @@ class Model {
     
     public function getLesVols(){
         $db = $this->getDb();
-        $sql = $db->query("SELECT a1.nom as depart_nom, a2.nom as arrivee_nom, a1.pays as depart_pays, a2.pays as arrivee_pays, date_depart, date_arrivee, prix, places, numero  FROM aeroports_vols "
+        $sql = $db->query("SELECT a1.nom as depart_nom, a2.nom as arrivee_nom, a1.pays as depart_pays, a2.pays as arrivee_pays, date_depart, date_arrivee, prix, places, vols.numero as numero  FROM aeroports_vols "
                 . "LEFT JOIN vols ON vols.numero = aeroports_vols.num_vol "
                 . "LEFT JOIN aeroports a1 ON aeroports_vols.depart_id = a1.id "
                 . "LEFT JOIN aeroports a2 ON aeroports_vols.arrivee_id = a2.id");

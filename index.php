@@ -2,13 +2,15 @@
 session_start();
 require "utils/fonctions.php";
 require "modele/Model.php";
-ob_start();
+
 // Routing
 if(!isset($_REQUEST['action'])){
     $action = 'accueil';
 }else{
     $action = $_REQUEST['action'];
 }
+
+ob_start();
 
 switch($action){
     
@@ -61,6 +63,12 @@ switch($action){
         $reservations = isset($_SESSION['reservations']) ? $_SESSION['reservations'] : [] ;
         require "vues/v_voirReservations.php";
         break;
+
+    case 'pdfReservation':
+        $reservation = getLaReservation();
+        require "vues/v_pdfReservation.php";
+        creerPDFReservation($reservation);
+        break;
     
     default:
         require "vues/v_404.php";
@@ -69,7 +77,10 @@ switch($action){
 }
 
 $content = ob_get_clean();
-require "vues/v_entete.php";
+if($action !== "pdfReservation"){
+    require "vues/v_entete.php";
+}
     echo $content;
-require "vues/v_pied.php";
-?>
+if($action !== "pdfReservation"){
+    require "vues/v_pied.php";
+}

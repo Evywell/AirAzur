@@ -49,3 +49,7 @@ function supprimerReservation($id){
     }
     return false;
 }
+
+function getLaReservation(){
+    return isset($_SESSION['reservations'][$_GET['numReservation']]) ? $_SESSION['reservations'][$_GET['numReservation']] : null;
+}

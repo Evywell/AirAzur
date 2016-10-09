@@ -21,6 +21,6 @@
         <input id="nbvoyageurs" type="text" name="nbvoyageurs">
     </p>
     <input type="hidden" name="idVol" value="<?php echo $idVol; ?>">
-    <button type="submit">valider</button>
-    <button type="reset">Annuler</button>
+    <button type="submit" class="button">valider</button>
+    <button type="reset" class="button">Annuler</button>
 </form>
